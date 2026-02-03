@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodes - The Cozy Crime Chronicles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Spectral:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">🔍 Cozy Crime Chronicles</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="episodes.html" class="active">Episodes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="header-content">
+            <h1>Episode Guide</h1>
+            <div class="subtitle">Your Complete Reference to Classic Mysteries</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filter-section">
+            <div class="filter-controls">
+                <div>
+                    <label for="show-filter">Show:</label>
+                    <select id="show-filter">
+                        <option value="all">All Shows</option>
+                        <option value="columbo">Columbo</option>
+                        <option value="murder-she-wrote">Murder, She Wrote</option>
+                        <option value="midsomer-murders">Midsomer Murders</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="search-episodes">Search:</label>
+                    <input type="text" id="search-episodes" placeholder="Search episodes...">
+                </div>
+            </div>
+        </div>
+
+        <div id="episode-list" class="episode-list">
+            <p style="text-align: center; font-size: 1.2rem; padding: 2rem;">Loading episodes...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with affection for the gentle art of detection • "Just one more thing..."</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> • 
+            <a href="episodes.html">Episodes</a> • 
+            <a href="about.html">About</a> • 
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <div class="magnifying-glass">🔍</div>
+
+    <script src="script.js"></script>
+    <script src="episodes.js"></script>
+</body>
+</html>

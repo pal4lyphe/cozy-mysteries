@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Cozy Crime Chronicles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Spectral:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">🔍 Cozy Crime Chronicles</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="episodes.html">Episodes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="header-content">
+            <h1>Get in Touch</h1>
+            <div class="subtitle">We'd Love to Hear From You</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="contact-form">
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8;">
+                Have a favorite episode you'd like to discuss? Noticed an error in our episode guide? 
+                Want to suggest another cozy mystery show we should feature? We're all ears! Drop us 
+                a line using the form below.
+            </p>
+
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div id="form-message" style="margin-top: 1.5rem; padding: 1rem; display: none;"></div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--dark-cream);">
+                <h2 style="font-family: 'Spectral', serif; font-size: 1.8rem; color: var(--burgundy); margin-bottom: 1rem;">
+                    Other Ways to Connect
+                </h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                    While we currently don't have social media accounts (we're keeping it cozy and focused!), 
+                    we'd love to hear from you via email. We read every message and do our best to respond 
+                    to all inquiries within a few days.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>Suggestions Welcome:</strong> If there's a classic mystery show you think deserves 
+                    a spot on our site, let us know! We're always looking to expand our coverage of cozy crime 
+                    television.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with affection for the gentle art of detection • "Just one more thing..."</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> • 
+            <a href="episodes.html">Episodes</a> • 
+            <a href="about.html">About</a> • 
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <div class="magnifying-glass">🔍</div>
+
+    <script src="script.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            formMessage.style.display = 'block';
+            formMessage.style.background = 'var(--dark-cream)';
+            formMessage.style.border = '2px solid var(--deep-green)';
+            formMessage.style.color = 'var(--charcoal)';
+            formMessage.innerHTML = `
+                <p style="margin: 0; font-size: 1.1rem;">
+                    <strong>Thank you for your message!</strong><br>
+                    Note: This is a demonstration form. To make it functional, you'll need to connect it 
+                    to a backend service like Formspree, Netlify Forms, or similar. For now, your message 
+                    has been logged to the console.
+                </p>
+            `;
+            
+            // Log the form data (for demonstration)
+            const formData = new FormData(this);
+            console.log('Form submitted with data:', Object.fromEntries(formData));
+            
+            // Reset the form
+            this.reset();
+            
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+</body>
+</html>

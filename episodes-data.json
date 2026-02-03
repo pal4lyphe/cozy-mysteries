@@ -1,0 +1,190 @@
+[
+  {
+    "show": "columbo",
+    "showName": "Columbo",
+    "season": 1,
+    "episode": 1,
+    "title": "Murder by the Book",
+    "year": 1971,
+    "description": "Mystery writer Ken Franklin kills his partner to become the sole beneficiary of their lucrative book series. Lieutenant Columbo must prove that the seemingly perfect murder was anything but.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0067906/",
+      "wiki": "https://en.wikipedia.org/wiki/Murder_by_the_Book_(Columbo)"
+    }
+  },
+  {
+    "show": "columbo",
+    "showName": "Columbo",
+    "season": 1,
+    "episode": 2,
+    "title": "Death Lends a Hand",
+    "year": 1971,
+    "description": "A private investigator murders the wife of a client after she rebuffs his advances. Columbo investigates the seemingly accidental death, finding inconsistencies in the detective's story.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0067908/",
+      "wiki": "https://en.wikipedia.org/wiki/Death_Lends_a_Hand"
+    }
+  },
+  {
+    "show": "columbo",
+    "showName": "Columbo",
+    "season": 2,
+    "episode": 1,
+    "title": "Étude in Black",
+    "year": 1972,
+    "description": "A famous orchestra conductor murders his mistress when she threatens to tell his wife about their affair. Columbo must find proof beyond the conductor's seemingly perfect alibi.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0068000/",
+      "wiki": "https://en.wikipedia.org/wiki/%C3%89tude_in_Black"
+    }
+  },
+  {
+    "show": "columbo",
+    "showName": "Columbo",
+    "season": 3,
+    "episode": 2,
+    "title": "Any Old Port in a Storm",
+    "year": 1973,
+    "description": "Wine connoisseur Adrian Carsini kills his brother when he threatens to sell their vineyard. Columbo uses his knowledge of wine and careful observation to trap the murderer. Often cited as one of the best Columbo episodes.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0068000/",
+      "wiki": "https://en.wikipedia.org/wiki/Any_Old_Port_in_a_Storm"
+    }
+  },
+  {
+    "show": "columbo",
+    "showName": "Columbo",
+    "season": 7,
+    "episode": 3,
+    "title": "Try and Catch Me",
+    "year": 1977,
+    "description": "Mystery novelist Abigail Mitchell kills the man who murdered her niece. In a battle of wits, Columbo matches minds with someone as clever as he is, creating a fascinating psychological duel.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0068000/",
+      "wiki": "https://en.wikipedia.org/wiki/Try_and_Catch_Me"
+    }
+  },
+  {
+    "show": "murder-she-wrote",
+    "showName": "Murder, She Wrote",
+    "season": 1,
+    "episode": 1,
+    "title": "The Murder of Sherlock Holmes",
+    "year": 1984,
+    "description": "Jessica Fletcher attends a costume party in New York City to celebrate her first novel, where she becomes embroiled in a real murder investigation. This feature-length pilot introduces viewers to Cabot Cove's favorite mystery writer.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0653510/",
+      "wiki": "https://en.wikipedia.org/wiki/The_Murder_of_Sherlock_Holmes"
+    }
+  },
+  {
+    "show": "murder-she-wrote",
+    "showName": "Murder, She Wrote",
+    "season": 1,
+    "episode": 2,
+    "title": "Deadly Lady",
+    "year": 1984,
+    "description": "Jessica's niece is arrested for the murder of her employer. Convinced of her innocence, Jessica investigates the victim's glamorous but cutthroat fashion company to find the real killer.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0653510/",
+      "wiki": "https://en.wikipedia.org/wiki/Deadly_Lady"
+    }
+  },
+  {
+    "show": "murder-she-wrote",
+    "showName": "Murder, She Wrote",
+    "season": 2,
+    "episode": 8,
+    "title": "Dead Heat",
+    "year": 1985,
+    "description": "At a horse farm, Jessica investigates when a wealthy horse breeder is murdered. The suspects include family members and business partners, all with motives related to the valuable racing stables.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0653510/"
+    }
+  },
+  {
+    "show": "murder-she-wrote",
+    "showName": "Murder, She Wrote",
+    "season": 3,
+    "episode": 8,
+    "title": "Magnum on Ice",
+    "year": 1986,
+    "description": "In this crossover episode, Jessica teams up with Thomas Magnum in Hawaii when a renowned tennis player is murdered. The episode combines the best of both mystery series.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0653510/"
+    }
+  },
+  {
+    "show": "murder-she-wrote",
+    "showName": "Murder, She Wrote",
+    "season": 5,
+    "episode": 1,
+    "title": "J.B. as in Jailbird",
+    "year": 1988,
+    "description": "Jessica is arrested for murder in the Soviet Union while on a book tour. She must prove her innocence from behind bars in a foreign country, using only her wits and powers of observation.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0653510/"
+    }
+  },
+  {
+    "show": "midsomer-murders",
+    "showName": "Midsomer Murders",
+    "season": 1,
+    "episode": 1,
+    "title": "The Killings at Badger's Drift",
+    "year": 1997,
+    "description": "When an elderly woman dies in the village of Badger's Drift, her friend is convinced it was murder. DCI Tom Barnaby investigates, uncovering dark secrets in the seemingly idyllic English village. This pilot episode sets the tone for the entire series.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0118401/",
+      "wiki": "https://en.wikipedia.org/wiki/The_Killings_at_Badger%27s_Drift"
+    }
+  },
+  {
+    "show": "midsomer-murders",
+    "showName": "Midsomer Murders",
+    "season": 2,
+    "episode": 1,
+    "title": "Death's Shadow",
+    "year": 1999,
+    "description": "Murders occur at a New Age commune in Midsomer, where spiritual pursuits mask deadly intentions. Barnaby must navigate the world of alternative medicine and meditation to find a killer.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0118401/"
+    }
+  },
+  {
+    "show": "midsomer-murders",
+    "showName": "Midsomer Murders",
+    "season": 3,
+    "episode": 3,
+    "title": "Judgement Day",
+    "year": 2000,
+    "description": "A series of murders rock the peaceful village of Midsomer Mallow. Each victim was involved in a controversial decision years earlier, and now someone is exacting revenge.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0118401/"
+    }
+  },
+  {
+    "show": "midsomer-murders",
+    "showName": "Midsomer Murders",
+    "season": 5,
+    "episode": 4,
+    "title": "Ring Out Your Dead",
+    "year": 2002,
+    "description": "Bell-ringers in Midsomer parishes are being murdered. Barnaby must investigate the competitive world of campanology (bell-ringing) to stop a killer with a very specific grudge.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0118401/"
+    }
+  },
+  {
+    "show": "midsomer-murders",
+    "showName": "Midsomer Murders",
+    "season": 7,
+    "episode": 5,
+    "title": "The Maid in Splendour",
+    "year": 2004,
+    "description": "When a local pub landlord is killed, Barnaby investigates the close-knit community around the historic inn. Ancient feuds and modern greed collide in this atmospheric mystery.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0118401/"
+    }
+  }
+]

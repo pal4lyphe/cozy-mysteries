@@ -8,6 +8,7 @@ async function loadEpisodes() {
         allEpisodes = await response.json();
         displayEpisodes(allEpisodes);
         setupFilters();
+        populateSeasons(); // Populate season dropdown
     } catch (error) {
         console.error('Error loading episodes:', error);
         document.getElementById('episode-list').innerHTML = `
@@ -16,6 +17,38 @@ async function loadEpisodes() {
             </p>
         `;
     }
+}
+
+// Populate season dropdown based on selected show
+function populateSeasons() {
+    const showFilter = document.getElementById('show-filter');
+    const seasonFilter = document.getElementById('season-filter');
+    const selectedShow = showFilter ? showFilter.value : 'all';
+    
+    // Get unique seasons for the selected show
+    let seasons = new Set();
+    
+    if (selectedShow === 'all') {
+        // Get all seasons from all shows
+        allEpisodes.forEach(ep => seasons.add(ep.season));
+    } else {
+        // Get seasons only from selected show
+        allEpisodes
+            .filter(ep => ep.show === selectedShow)
+            .forEach(ep => seasons.add(ep.season));
+    }
+    
+    // Sort seasons numerically
+    const sortedSeasons = Array.from(seasons).sort((a, b) => a - b);
+    
+    // Populate dropdown
+    seasonFilter.innerHTML = '<option value="all">All Seasons</option>';
+    sortedSeasons.forEach(season => {
+        const option = document.createElement('option');
+        option.value = season;
+        option.textContent = `Season ${season}`;
+        seasonFilter.appendChild(option);
+    });
 }
 
 // Display episodes
@@ -60,6 +93,7 @@ function displayEpisodes(episodes) {
 // Setup filters
 function setupFilters() {
     const showFilter = document.getElementById('show-filter');
+    const seasonFilter = document.getElementById('season-filter');
     const searchInput = document.getElementById('search-episodes');
     const sortSelect = document.getElementById('sort-episodes');
     
@@ -68,11 +102,19 @@ function setupFilters() {
     const showParam = urlParams.get('show');
     if (showParam && showFilter) {
         showFilter.value = showParam;
+        populateSeasons(); // Update seasons for pre-selected show
         filterEpisodes();
     }
     
     if (showFilter) {
-        showFilter.addEventListener('change', filterEpisodes);
+        showFilter.addEventListener('change', () => {
+            populateSeasons(); // Update season options when show changes
+            filterEpisodes();
+        });
+    }
+    
+    if (seasonFilter) {
+        seasonFilter.addEventListener('change', filterEpisodes);
     }
     
     if (searchInput) {
@@ -87,10 +129,12 @@ function setupFilters() {
 // Filter episodes
 function filterEpisodes() {
     const showFilter = document.getElementById('show-filter');
+    const seasonFilter = document.getElementById('season-filter');
     const searchInput = document.getElementById('search-episodes');
     const sortSelect = document.getElementById('sort-episodes');
     
     const selectedShow = showFilter ? showFilter.value : 'all';
+    const selectedSeason = seasonFilter ? seasonFilter.value : 'all';
     const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
     const sortBy = sortSelect ? sortSelect.value : 'popularity';
     
@@ -99,6 +143,11 @@ function filterEpisodes() {
     // Filter by show
     if (selectedShow !== 'all') {
         filtered = filtered.filter(ep => ep.show === selectedShow);
+    }
+    
+    // Filter by season
+    if (selectedSeason !== 'all') {
+        filtered = filtered.filter(ep => ep.season === parseInt(selectedSeason));
     }
     
     // Filter by search term

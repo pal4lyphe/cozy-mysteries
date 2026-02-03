@@ -3,43 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cozy Crime Chronicles</title>
-
+    <title>The Cozy Crime Chronicles - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Spectral:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">🔍 Cozy Crime Chronicles</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="episodes.html">Episodes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <style>
-        :root {
-            --cream: #f4f1e8;
-            --dark-cream: #e8e3d5;
-            --burgundy: #8b3a3a;
-            --deep-green: #2d4a3e;
-            --gold: #c9a961;
-            --charcoal: #3a3a3a;
-            --soft-shadow: rgba(0, 0, 0, 0.08);
-            --grain-opacity: 0.03;
-        }
+    <header class="hero">
+        <div class="header-content">
+            <h1>The Cozy Crime Chronicles</h1>
+            <div class="subtitle">A Celebration of Genteel Detection</div>
+        </div>
+    </header>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <div class="container">
+        <div class="intro">
+            <p>
+                Welcome to a world where murder is dreadful but never gratuitous, where brilliant minds solve puzzles 
+                over tea and contemplation, and where justice always prevails by the final act. This is a haven for 
+                devotees of the cozy mystery—those delightful detective shows where the setting is charming, the 
+                murders are civilized, and the sleuths are unforgettable.
+            </p>
+        </div>
 
-        body {
-            background: var(--cream);
-            font-family: 'Crimson Pro', serif;
-            color: var(--charcoal);
-            line-height: 1.75;
-            overflow-x: hidden;
-        }
+        <div class="shows-grid">
+            <div class="show-card">
+                <div class="show-header">
+                    <h2>Columbo</h2>
+                    <div class="show-years">1968-2003</div>
+                </div>
+                <div class="show-body">
+                    <div class="show-description">
+                        The rumpled raincoat. The battered Peugeot. The "just one more thing." Lieutenant Columbo 
+                        disarms the wealthy and arrogant with his humble demeanor, all while constructing an 
+                        airtight case with meticulous attention to detail.
+                    </div>
+                    <div class="show-highlights">
+                        <h3>Signature Elements</h3>
+                        <ul>
+                            <li>Inverted detective format—we see the crime committed</li>
+                            <li>Working-class detective vs. elite murderers</li>
+                            <li>Deceptively brilliant psychological warfare</li>
+                            <li>That iconic catchphrase</li>
+                        </ul>
+                    </div>
+                    <a href="episodes.html?show=columbo" class="show-link">View Episodes →</a>
+                </div>
+            </div>
 
-        /* Vintage grain */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image:
-                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px),
-                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px);
-            opacity: var(--grain-opacity);
-            pointer
+            <div class="show-card">
+                <div class="show-header">
+                    <h2>Murder, She Wrote</h2>
+                    <div class="show-years">1984-1996</div>
+                </div>
+                <div class="show-body">
+                    <div class="show-description">
+                        Jessica Fletcher, mystery novelist and amateur sleuth extraordinaire, encounters murder 
+                        wherever she goes—in her beloved Cabot Cove and far beyond. With keen observation and 
+                        compassionate wisdom, she unravels even the most tangled of cases.
+                    </div>
+                    <div class="show-highlights">
+                        <h3>Signature Elements</h3>
+                        <ul>
+                            <li>Quintessential cozy small-town mysteries</li>
+                            <li>266 episodes of pure detection</li>
+                            <li>Angela Lansbury's warm, brilliant portrayal</li>
+                            <li>The writer as detective trope perfected</li>
+                        </ul>
+                    </div>
+                    <a href="episodes.html?show=murder-she-wrote" class="show-link">View Episodes →</a>
+                </div>
+            </div>
+
+            <div class="show-card">
+                <div class="show-header">
+                    <h2>Midsomer Murders</h2>
+                    <div class="show-years">1997-Present</div>
+                </div>
+                <div class="show-body">
+                    <div class="show-description">
+                        In the fictional English county of Midsomer, picturesque villages harbor dark secrets and 
+                        improbably high murder rates. DCI Barnaby (both Tom and John) bring order to the chaos 
+                        with methodical investigation and quintessentially British composure.
+                    </div>
+                    <div class="show-highlights">
+                        <h3>Signature Elements</h3>
+                        <ul>
+                            <li>Stunning English countryside settings</li>
+                            <li>Eccentric village characters and traditions</li>
+                            <li>Creative and theatrical murder methods</li>
+                            <li>Over 130 feature-length episodes</li>
+                        </ul>
+                    </div>
+                    <a href="episodes.html?show=midsomer-murders" class="show-link">View Episodes →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="fun-facts">
+            <h2>Delightful Detection Facts</h2>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <h3>Columbo's Car</h3>
+                    <p>That battered Peugeot 403 convertible was actually Peter Falk's personal car, perfectly embodying his character's disheveled charm.</p>
+                </div>
+                <div class="fact-item">
+                    <h3>Cabot Cove's Problem</h3>
+                    <p>With 274 murders in 12 years, Cabot Cove would have the highest murder rate in the world—about 1,490 per 100,000 people!</p>
+                </div>
+                <div class="fact-item">
+                    <h3>Midsomer's Body Count</h3>
+                    <p>Over 400 murders have occurred in Midsomer's idyllic villages, often involving local festivals, historical reenactments, or village fêtes gone terribly wrong.</p>
+                </div>
+                <div class="fact-item">
+                    <h3>The Cozy Mystery Appeal</h3>
+                    <p>These shows prove that mystery fans don't need gore or grit—just brilliant plotting, memorable characters, and the satisfaction of justice served.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with affection for the gentle art of detection • "Just one more thing..."</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> • 
+            <a href="episodes.html">Episodes</a> • 
+            <a href="about.html">About</a> • 
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <div class="magnifying-glass">🔍</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

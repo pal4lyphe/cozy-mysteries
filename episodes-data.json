@@ -82,15 +82,16 @@
   {
     "show": "columbo",
     "showName": "Columbo",
-    "season": 3,
+    "season": 7,
     "episode": 3,
-    "title": "Candidate for Crime",
-    "year": 1973,
-    "rating": 7.8,
-    "popularity": 76,
-    "description": "A senatorial candidate murders his campaign manager to prevent exposure of his past indiscretions. Columbo investigates while navigating the world of politics.",
+    "title": "Try and Catch Me",
+    "year": 1977,
+    "rating": 8.7,
+    "popularity": 89,
+    "description": "Mystery novelist Abigail Mitchell kills the man who murdered her niece. In a battle of wits, Columbo matches minds with someone as clever as he is, creating a fascinating psychological duel.",
     "links": {
       "imdb": "https://www.imdb.com/title/tt0068000/",
+      "wiki": "https://en.wikipedia.org/wiki/Try_and_Catch_Me",
       "streaming": {
         "platform": "Peacock",
         "url": "https://www.peacocktv.com/stream-tv/columbo",
@@ -141,12 +142,12 @@
     "show": "murder-she-wrote",
     "showName": "Murder, She Wrote",
     "season": 2,
-    "episode": 1,
-    "title": "Widow, Weep for Me",
+    "episode": 8,
+    "title": "Dead Heat",
     "year": 1985,
-    "rating": 7.5,
-    "popularity": 72,
-    "description": "Jessica investigates when a friend's husband is murdered and the friend becomes the prime suspect.",
+    "rating": 7.6,
+    "popularity": 71,
+    "description": "At a horse farm, Jessica investigates when a wealthy horse breeder is murdered. The suspects include family members and business partners, all with motives related to the valuable racing stables.",
     "links": {
       "imdb": "https://www.imdb.com/title/tt0653510/",
       "streaming": {
@@ -166,6 +167,25 @@
     "rating": 8.4,
     "popularity": 91,
     "description": "In this crossover episode, Jessica teams up with Thomas Magnum in Hawaii when a renowned tennis player is murdered. The episode combines the best of both mystery series.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0653510/",
+      "streaming": {
+        "platform": "Peacock",
+        "url": "https://www.peacocktv.com/stream-tv/murder-she-wrote",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "murder-she-wrote",
+    "showName": "Murder, She Wrote",
+    "season": 5,
+    "episode": 1,
+    "title": "J.B. as in Jailbird",
+    "year": 1988,
+    "rating": 8.0,
+    "popularity": 80,
+    "description": "Jessica is arrested for murder in the Soviet Union while on a book tour. She must prove her innocence from behind bars in a foreign country, using only her wits and powers of observation.",
     "links": {
       "imdb": "https://www.imdb.com/title/tt0653510/",
       "streaming": {
@@ -218,50 +238,12 @@
     "show": "midsomer-murders",
     "showName": "Midsomer Murders",
     "season": 3,
-    "episode": 1,
-    "title": "Death of a Stranger",
-    "year": 1999,
-    "rating": 8.0,
-    "popularity": 78,
-    "description": "A series of deaths in a village leads Barnaby to investigate the mysterious circumstances surrounding the victims.",
-    "links": {
-      "imdb": "https://www.imdb.com/title/tt0118401/",
-      "streaming": {
-        "platform": "Acorn TV",
-        "url": "https://acorn.tv/midsomer-murders",
-        "affiliate": true
-      }
-    }
-  },
-  {
-    "show": "midsomer-murders",
-    "showName": "Midsomer Murders",
-    "season": 3,
     "episode": 3,
     "title": "Judgement Day",
     "year": 2000,
     "rating": 8.2,
     "popularity": 83,
     "description": "A series of murders rock the peaceful village of Midsomer Mallow. Each victim was involved in a controversial decision years earlier, and now someone is exacting revenge.",
-    "links": {
-      "imdb": "https://www.imdb.com/title/tt0118401/",
-      "streaming": {
-        "platform": "Acorn TV",
-        "url": "https://acorn.tv/midsomer-murders",
-        "affiliate": true
-      }
-    }
-  },
-  {
-    "show": "midsomer-murders",
-    "showName": "Midsomer Murders",
-    "season": 4,
-    "episode": 2,
-    "title": "Dark Autumn",
-    "year": 2000,
-    "rating": 7.8,
-    "popularity": 75,
-    "description": "Barnaby investigates a murder at a historic abbey as dark secrets from the past come to light.",
     "links": {
       "imdb": "https://www.imdb.com/title/tt0118401/",
       "streaming": {
@@ -286,6 +268,140 @@
       "streaming": {
         "platform": "Acorn TV",
         "url": "https://acorn.tv/midsomer-murders",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "midsomer-murders",
+    "showName": "Midsomer Murders",
+    "season": 7,
+    "episode": 5,
+    "title": "The Maid in Splendour",
+    "year": 2004,
+    "rating": 7.7,
+    "popularity": 73,
+    "description": "When a local pub landlord is killed, Barnaby investigates the close-knit community around the historic inn. Ancient feuds and modern greed collide in this atmospheric mystery.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0118401/",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/midsomer-murders",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "poirot",
+    "showName": "Agatha Christie's Poirot",
+    "season": 1,
+    "episode": 1,
+    "title": "The Adventure of the Clapham Cook",
+    "year": 1989,
+    "rating": 8.1,
+    "popularity": 82,
+    "description": "Poirot investigates the disappearance of a cook, which leads him to uncover a much larger mystery involving stolen bonds and international intrigue.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0676168/",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/poirot",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "poirot",
+    "showName": "Agatha Christie's Poirot",
+    "season": 1,
+    "episode": 2,
+    "title": "Murder in the Mews",
+    "year": 1989,
+    "rating": 8.2,
+    "popularity": 84,
+    "description": "What appears to be a suicide on Guy Fawkes Night proves to be murder when Poirot investigates. The Belgian detective must unravel a web of lies and alibis.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0676232/",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/poirot",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "poirot",
+    "showName": "Agatha Christie's Poirot",
+    "season": 2,
+    "episode": 1,
+    "title": "Peril at End House",
+    "year": 1990,
+    "rating": 8.7,
+    "popularity": 89,
+    "description": "While on holiday in Cornwall, Poirot meets a young woman who has survived multiple attempts on her life. He must discover who wants her dead and why.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0676253/",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/poirot",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "poirot",
+    "showName": "Agatha Christie's Poirot",
+    "season": 3,
+    "episode": 1,
+    "title": "The Mysterious Affair at Styles",
+    "year": 1990,
+    "rating": 8.4,
+    "popularity": 86,
+    "description": "In Poirot's very first case, the wealthy mistress of Styles Court is murdered. This feature-length episode adapts Christie's first novel, introducing Poirot and his friend Hastings.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0676233/",
+      "wiki": "https://en.wikipedia.org/wiki/The_Mysterious_Affair_at_Styles",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/poirot",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "poirot",
+    "showName": "Agatha Christie's Poirot",
+    "season": 4,
+    "episode": 3,
+    "title": "One, Two, Buckle My Shoe",
+    "year": 1992,
+    "rating": 8.3,
+    "popularity": 83,
+    "description": "A dentist is murdered during Poirot's routine visit. The investigation reveals political intrigue and conspiracy at the highest levels.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0676242/",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/poirot",
+        "affiliate": true
+      }
+    }
+  },
+  {
+    "show": "poirot",
+    "showName": "Agatha Christie's Poirot",
+    "season": 5,
+    "episode": 5,
+    "title": "The Adventure of the Italian Nobleman",
+    "year": 1993,
+    "rating": 8.0,
+    "popularity": 79,
+    "description": "Poirot investigates the murder of an Italian nobleman in his London flat. The case involves blackmail, revenge, and the Italian mafia.",
+    "links": {
+      "imdb": "https://www.imdb.com/title/tt0676175/",
+      "streaming": {
+        "platform": "Acorn TV",
+        "url": "https://acorn.tv/poirot",
         "affiliate": true
       }
     }

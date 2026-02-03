@@ -33,18 +33,26 @@ function displayEpisodes(episodes) {
     
     episodeList.innerHTML = episodes.map(episode => `
         <div class="episode-card" data-show="${episode.show}">
-            <h3 class="episode-title">${episode.title}</h3>
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                <h3 class="episode-title">${episode.title}</h3>
+                ${episode.rating ? `<span class="rating-badge">⭐ ${episode.rating}/10</span>` : ''}
+            </div>
             <div class="episode-meta">
                 ${episode.showName} • Season ${episode.season}, Episode ${episode.episode} • ${episode.year}
             </div>
             <p class="episode-description">${episode.description}</p>
-            ${episode.links ? `
-                <div class="episode-links">
-                    ${episode.links.imdb ? `<a href="${episode.links.imdb}" target="_blank">IMDb</a>` : ''}
-                    ${episode.links.wiki ? `<a href="${episode.links.wiki}" target="_blank">Wikipedia</a>` : ''}
-                    ${episode.links.streaming ? `<a href="${episode.links.streaming}" target="_blank">Watch</a>` : ''}
-                </div>
-            ` : ''}
+            <div class="episode-links">
+                ${episode.links?.imdb ? `<a href="${episode.links.imdb}" target="_blank" rel="noopener">IMDb</a>` : ''}
+                ${episode.links?.wiki ? `<a href="${episode.links.wiki}" target="_blank" rel="noopener">Wikipedia</a>` : ''}
+                ${episode.links?.streaming ? `
+                    <a href="${episode.links.streaming.url}" 
+                       target="_blank" 
+                       rel="noopener${episode.links.streaming.affiliate ? ' nofollow sponsored' : ''}" 
+                       class="watch-link">
+                       Watch on ${episode.links.streaming.platform} →
+                    </a>
+                ` : ''}
+            </div>
         </div>
     `).join('');
 }
@@ -53,6 +61,7 @@ function displayEpisodes(episodes) {
 function setupFilters() {
     const showFilter = document.getElementById('show-filter');
     const searchInput = document.getElementById('search-episodes');
+    const sortSelect = document.getElementById('sort-episodes');
     
     // Check URL parameters
     const urlParams = new URLSearchParams(window.location.search);
@@ -69,15 +78,21 @@ function setupFilters() {
     if (searchInput) {
         searchInput.addEventListener('input', filterEpisodes);
     }
+    
+    if (sortSelect) {
+        sortSelect.addEventListener('change', filterEpisodes);
+    }
 }
 
 // Filter episodes
 function filterEpisodes() {
     const showFilter = document.getElementById('show-filter');
     const searchInput = document.getElementById('search-episodes');
+    const sortSelect = document.getElementById('sort-episodes');
     
     const selectedShow = showFilter ? showFilter.value : 'all';
     const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+    const sortBy = sortSelect ? sortSelect.value : 'popularity';
     
     let filtered = allEpisodes;
     
@@ -94,6 +109,24 @@ function filterEpisodes() {
             ep.showName.toLowerCase().includes(searchTerm)
         );
     }
+    
+    // Sort episodes
+    filtered = [...filtered].sort((a, b) => {
+        switch(sortBy) {
+            case 'popularity':
+                return (b.popularity || 0) - (a.popularity || 0);
+            case 'rating':
+                return (b.rating || 0) - (a.rating || 0);
+            case 'year-desc':
+                return b.year - a.year;
+            case 'year-asc':
+                return a.year - b.year;
+            case 'title':
+                return a.title.localeCompare(b.title);
+            default:
+                return 0;
+        }
+    });
     
     displayEpisodes(filtered);
 }

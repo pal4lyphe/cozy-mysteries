@@ -517,6 +517,26 @@ footer p {
     background: var(--burgundy);
 }
 
+.rating-badge {
+    background: var(--gold);
+    color: var(--charcoal);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.watch-link {
+    background: var(--burgundy) !important;
+    font-weight: bold;
+}
+
+.watch-link:hover {
+    background: var(--deep-green) !important;
+}
+
 /* Form styles */
 .contact-form,
 .about-content {

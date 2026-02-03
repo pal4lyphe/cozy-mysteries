@@ -258,6 +258,35 @@ h1 {
     box-shadow: 12px 12px 0 var(--burgundy);
 }
 
+.show-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--dark-cream) 0%, var(--cream) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--charcoal);
+}
+
+.show-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.show-card:hover .show-image img {
+    transform: scale(1.05);
+}
+
+.show-image::after {
+    content: '📺';
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.1;
+}
+
 .show-header {
     background: var(--charcoal);
     padding: 1.5rem;

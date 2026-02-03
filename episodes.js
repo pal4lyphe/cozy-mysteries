@@ -77,6 +77,7 @@ function displayEpisodes(episodes) {
             <div class="episode-links">
                 ${episode.links?.imdb ? `<a href="${episode.links.imdb}" target="_blank" rel="noopener">IMDb</a>` : ''}
                 ${episode.links?.wiki ? `<a href="${episode.links.wiki}" target="_blank" rel="noopener">Wikipedia</a>` : ''}
+                <!-- Streaming links hidden - uncomment when ready to monetize
                 ${episode.links?.streaming ? `
                     <a href="${episode.links.streaming.url}" 
                        target="_blank" 
@@ -85,6 +86,7 @@ function displayEpisodes(episodes) {
                        Watch on ${episode.links.streaming.platform} →
                     </a>
                 ` : ''}
+                -->
             </div>
         </div>
     `).join('');

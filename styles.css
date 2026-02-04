@@ -771,6 +771,24 @@ footer p {
 }
 
 /* Responsive */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex !important;
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: all !important;
+        flex-direction: row !important;
+        gap: 2.5rem !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+    
+    .nav-toggle {
+        display: none !important;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 60px;

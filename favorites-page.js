@@ -44,17 +44,19 @@ function displayFavorites() {
     });
     
     statsEl.innerHTML = `
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">${favoriteEpisodes.length}</div>
-                <div class="stat-label">Total Favorites</div>
-            </div>
-            ${Object.entries(showCounts).map(([show, count]) => `
+        <div style="background: var(--dark-cream); border: 2px solid var(--charcoal); padding: 2rem; margin-bottom: 2rem;">
+            <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">${count}</div>
-                    <div class="stat-label">${show}</div>
+                    <div class="stat-number">${favoriteEpisodes.length}</div>
+                    <div class="stat-label">Total Favorites</div>
                 </div>
-            `).join('')}
+                ${Object.entries(showCounts).map(([show, count]) => `
+                    <div class="stat-card">
+                        <div class="stat-number">${count}</div>
+                        <div class="stat-label">${show}</div>
+                    </div>
+                `).join('')}
+            </div>
         </div>
     `;
     

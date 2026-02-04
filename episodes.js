@@ -1,5 +1,6 @@
 // Episodes page functionality
 let allEpisodes = [];
+let favorites = JSON.parse(localStorage.getItem('favoriteEpisodes')) || [];
 
 // Load episodes from JSON file
 async function loadEpisodes() {
@@ -9,6 +10,7 @@ async function loadEpisodes() {
         displayEpisodes(allEpisodes);
         setupFilters();
         populateSeasons(); // Populate season dropdown
+        setupRandomButton();
     } catch (error) {
         console.error('Error loading episodes:', error);
         document.getElementById('episode-list').innerHTML = `
@@ -17,6 +19,38 @@ async function loadEpisodes() {
             </p>
         `;
     }
+}
+
+// Setup random episode button
+function setupRandomButton() {
+    const randomBtn = document.getElementById('random-episode-btn');
+    if (randomBtn) {
+        randomBtn.addEventListener('click', showRandomEpisode);
+    }
+}
+
+// Show random episode
+function showRandomEpisode() {
+    const showFilter = document.getElementById('show-filter');
+    const selectedShow = showFilter ? showFilter.value : 'all';
+    
+    let pool = allEpisodes;
+    if (selectedShow !== 'all') {
+        pool = allEpisodes.filter(ep => ep.show === selectedShow);
+    }
+    
+    if (pool.length === 0) {
+        alert('No episodes available!');
+        return;
+    }
+    
+    const randomEpisode = pool[Math.floor(Math.random() * pool.length)];
+    
+    // Display only the random episode with special styling
+    displayEpisodes([randomEpisode], true);
+    
+    // Scroll to the episode
+    document.getElementById('episode-list').scrollIntoView({ behavior: 'smooth' });
 }
 
 // Populate season dropdown based on selected show
@@ -52,7 +86,7 @@ function populateSeasons() {
 }
 
 // Display episodes
-function displayEpisodes(episodes) {
+function displayEpisodes(episodes, isRandom = false) {
     const episodeList = document.getElementById('episode-list');
     
     if (episodes.length === 0) {
@@ -64,11 +98,33 @@ function displayEpisodes(episodes) {
         return;
     }
     
-    episodeList.innerHTML = episodes.map(episode => `
-        <div class="episode-card" data-show="${episode.show}">
+    if (isRandom) {
+        episodeList.innerHTML = `
+            <div style="background: var(--gold); padding: 1rem; margin-bottom: 1rem; text-align: center; border-radius: 4px;">
+                <strong>🎲 Random Episode Suggestion!</strong>
+                <button onclick="filterEpisodes()" style="margin-left: 1rem; padding: 0.5rem 1rem; background: var(--charcoal); color: var(--cream); border: none; cursor: pointer; border-radius: 4px;">Show All Episodes</button>
+            </div>
+        `;
+    } else {
+        episodeList.innerHTML = '';
+    }
+    
+    episodeList.innerHTML += episodes.map(episode => {
+        const episodeId = `${episode.show}-s${episode.season}e${episode.episode}`;
+        const isFavorite = favorites.includes(episodeId);
+        
+        return `
+        <div class="episode-card ${isRandom ? 'random-highlight' : ''}" data-show="${episode.show}">
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
                 <h3 class="episode-title">${episode.title}</h3>
-                ${episode.rating ? `<span class="rating-badge">⭐ ${episode.rating}/10</span>` : ''}
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    ${episode.rating ? `<span class="rating-badge">⭐ ${episode.rating}/10</span>` : ''}
+                    <button class="favorite-btn ${isFavorite ? 'is-favorite' : ''}" 
+                            onclick="toggleFavorite('${episodeId}')" 
+                            title="${isFavorite ? 'Remove from favorites' : 'Add to favorites'}">
+                        ${isFavorite ? '❤️' : '🤍'}
+                    </button>
+                </div>
             </div>
             <div class="episode-meta">
                 ${episode.showName} • Season ${episode.season}, Episode ${episode.episode} • ${episode.year}
@@ -89,7 +145,21 @@ function displayEpisodes(episodes) {
                 -->
             </div>
         </div>
-    `).join('');
+    `}).join('');
+}
+
+// Toggle favorite
+function toggleFavorite(episodeId) {
+    const index = favorites.indexOf(episodeId);
+    if (index > -1) {
+        favorites.splice(index, 1);
+    } else {
+        favorites.push(episodeId);
+    }
+    localStorage.setItem('favoriteEpisodes', JSON.stringify(favorites));
+    
+    // Re-render to update heart icons
+    filterEpisodes();
 }
 
 // Setup filters

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites - Cozy Crime Chronicles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🔍 Cozy Crime Chronicles</a>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="episodes.html">Episodes</a></li>
+                <li><a href="favorites.html" class="active">My Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>❤️ My Favorite Episodes</h1>
+            <p class="page-subtitle">Your personal collection of cozy crime classics</p>
+        </header>
+
+        <div id="favorites-stats" class="favorites-stats"></div>
+
+        <div id="favorite-episodes-list" class="episode-list">
+            <p style="text-align: center; font-size: 1.2rem; padding: 2rem;">Loading your favorites...</p>
+        </div>
+
+        <div id="empty-favorites" style="display: none; text-align: center; padding: 3rem;">
+            <h2 style="color: var(--burgundy); margin-bottom: 1rem;">No Favorites Yet!</h2>
+            <p style="margin-bottom: 2rem;">Start adding episodes to your favorites by clicking the heart (🤍) icon on any episode.</p>
+            <a href="episodes.html" class="cta-button">Browse Episodes</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with affection for the gentle art of detection • "Just one more thing..."</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="favorites-page.js"></script>
+</body>
+</html>
